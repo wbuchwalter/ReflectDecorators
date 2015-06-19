@@ -1345,6 +1345,7 @@ module Reflect {
     function CreateWeakMapPolyfill() {
         const UUID_SIZE = 16;
         const isNode = typeof global !== "undefined" &&
+            typeof window === "undefined" &&
             typeof module === "object" &&
             typeof module.exports === "object" &&
             typeof require === "function";
